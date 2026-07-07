@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 { @apply font-display; }
+  :focus-visible {
+    outline: 2px dashed #1F6F6F;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .grain {
+    background-image:
+      radial-gradient(rgba(59,42,32,0.08) 1px, transparent 1px),
+      radial-gradient(rgba(59,42,32,0.05) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+  .paper {
+    background-color: #F2E8D5;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(59,42,32,0.03) 0 2px, transparent 2px 6px);
+  }
+  .stamp-btn {
+    @apply inline-flex items-center gap-2 font-stamp font-semibold text-sm px-5 py-2 border-2 border-current rounded-full relative;
+  }
+  .ticket {
+    @apply relative bg-cream border-2 border-ink p-6 rounded-[25px];
+    background-image: linear-gradient(90deg, #F2E8D5 50%, transparent 50%);
+    background-size: 12px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 0, 0 100%;
+  }
+  .perf {
+    -webkit-mask:
+      radial-gradient(circle 6px at 0 50%, transparent 98%, #000) left/12px 100%,
+      radial-gradient(circle 6px at 100% 50%, transparent 98%, #000) right/12px 100%;
+    -webkit-mask-composite: source-in;
+            mask-composite: intersect;
+  }
+  .postage {
+    filter: drop-shadow(0 2px 0 rgba(59,42,32,0.15));
+  }
+  /* ── Velocity scroll / marquee ── */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  .marquee-track {
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-track-reverse {
+    animation: marquee-reverse 32s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-track,
+  .marquee-wrap:hover .marquee-track-reverse {
+    animation-play-state: paused;
+  }
+
+  /* ── Reveal on scroll ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+    .reveal, .reveal-left, .reveal-right {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+}

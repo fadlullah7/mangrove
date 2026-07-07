@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/data.ts","./src/main.tsx","./src/components/Footer.tsx","./src/components/Header.tsx","./src/components/Poster.tsx","./src/context/ReservationContext.tsx","./src/pages/Home.tsx","./src/pages/Konfirmasi.tsx","./src/pages/NotFound.tsx","./src/pages/Reservasi.tsx","./src/pages/SpotDetail.tsx","./src/pages/WahanaDetail.tsx"],"version":"5.9.3"}
