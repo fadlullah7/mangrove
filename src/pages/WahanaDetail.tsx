@@ -1,8 +1,18 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { wahanas } from "../data";
 import { useReservation } from "../context/ReservationContext";
 import { ArrowLeft, Check } from "lucide-react";
-import { PosterMangrove } from "../components/Poster";
+
+import c11 from "../assets/carousel 11.png";
+import c5 from "../assets/carousel 5.png";
+import imgEdukasi from "../assets/imgEdukasi.png";
+
+const wahanaImages: Record<string, string> = {
+  "perahu": c11,
+  "jogging": c5,
+  "edukasi": imgEdukasi,
+};
 
 export default function WahanaDetail() {
   const { wahanaId } = useParams();
@@ -26,15 +36,29 @@ export default function WahanaDetail() {
     navigate(`/reservasi/${wahana.id}`);
   };
 
+  const onBack = () => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("wahana")?.scrollIntoView({ behavior: "smooth" });
+    }, 200);
+  };
+
   return (
     <div className="paper grain py-12">
       <div className="max-w-5xl mx-auto px-4">
-        <Link to="/" className="inline-flex items-center gap-2 text-teal font-stamp text-xs font-medium">
+        <button
+          onClick={onBack}
+          className="inline-flex items-center gap-2 text-teal font-stamp text-xs font-medium"
+        >
           <ArrowLeft className="w-4 h-4" /> Kembali
-        </Link>
+        </button>
         <div className="mt-6 grid gap-10 md:grid-cols-2 items-start">
           <div className="rotate-[-1deg] border-4 border-ink bg-cream p-3 shadow-[6px_6px_0_#3B2A20]">
-            <PosterMangrove className="w-full h-auto" />
+            <img
+              src={wahanaImages[wahana.id] ?? c11}
+              alt={wahana.name}
+              className="w-full h-auto object-cover"
+            />
           </div>
           <div>
             <div className="font-stamp text-xs font-medium text-rust">

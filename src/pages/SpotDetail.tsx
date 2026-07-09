@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import c5 from "../assets/carousel 5.png";
 import c7 from "../assets/carousel 7.png";
 import c9 from "../assets/carousel 9.png";
-import c10 from "../assets/carousel10.png";
+import c10 from "../assets/carousel 10.png";
 
 const spotImages: Record<string, string> = {
   "mic": c7,
@@ -34,12 +34,22 @@ export default function SpotDetail() {
   const prev = spots[(idx - 1 + spots.length) % spots.length];
   const next = spots[(idx + 1) % spots.length];
 
+  const onBack = () => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("fasilitas")?.scrollIntoView({ behavior: "smooth" });
+    }, 200);
+  };
+
   return (
     <div className="paper grain py-12">
       <div className="max-w-5xl mx-auto px-4">
-        <Link to="/#fasilitas" className="inline-flex items-center gap-2 text-teal font-stamp text-xs font-medium">
+        <button
+          onClick={onBack}
+          className="inline-flex items-center gap-2 text-teal font-stamp text-xs font-medium"
+        >
           <ArrowLeft className="w-4 h-4" /> Kembali ke Fasilitas
-        </Link>
+        </button>
         <div className="mt-6 grid gap-10 md:grid-cols-2 items-center">
           <div className="rotate-1 border-4 border-ink bg-cream p-3 shadow-[6px_6px_0_#3B2A20]">
             <img

@@ -65,7 +65,7 @@ export const spots: Spot[] = [
     id: "mic",
     name: "Mangrove Information Center",
     short:
-      "Pusat informasi utama kawasan — memuat panel edukasi tentang jenis mangrove, biodiversitas, dan sejarah konservasi Wonorejo.",
+      "Pusat informasi utama kawasan. Memuat panel edukasi tentang jenis mangrove, biodiversitas, dan sejarah konservasi Wonorejo.",
     fact: "Kawasan ini merupakan bagian dari sabuk hijau PAMURBAYA seluas ±200 hektar.",
   },
   {
@@ -79,7 +79,7 @@ export const spots: Spot[] = [
     id: "dermaga",
     name: "Dermaga & Wisata Perahu",
     short:
-      "Titik awal wisata perahu bambu menyusuri sungai Wonorejo hingga muara — rute sekitar 5 km.",
+      "Titik awal wisata perahu bambu menyusuri sungai Wonorejo hingga muara, rute sekitar 5 km.",
     fact: "Perjalanan perahu memakan waktu ±15 menit dan sering melewati kanopi Nypa fruticans.",
   },
   {
@@ -96,11 +96,11 @@ export const whyMangroveMatters = [
     title: "Mencegah Abrasi & Intrusi Laut",
     body: "Akar mangrove menahan gelombang dan menahan air laut agar tidak merangsek ke daratan Surabaya Timur.",
     detail:
-      "Sistem perakaran mangrove yang kompleks — terutama akar tunjang dan akar napas — meredam energi gelombang hingga 70% sebelum mencapai daratan. Di Wonorejo, sabuk mangrove selebar ratusan meter berfungsi sebagai benteng alami yang melindungi permukiman pesisir dari abrasi, intrusi air laut ke akuifer tawar, dan dampak gelombang badai. Tanpa tutupan ini, garis pantai Surabaya Timur diprediksi akan mundur signifikan dalam satu dekade.",
+      "Sistem perakaran mangrove yang kompleks, terutama akar tunjang dan akar napas meredam energi gelombang hingga 70% sebelum mencapai daratan. Di Wonorejo, sabuk mangrove selebar ratusan meter berfungsi sebagai benteng alami yang melindungi permukiman pesisir dari abrasi, intrusi air laut ke akuifer tawar, dan dampak gelombang badai. Tanpa tutupan ini, garis pantai Surabaya Timur diprediksi akan mundur signifikan dalam satu dekade.",
   },
   {
     title: "Rumah Ratusan Spesies Burung",
-    body: "Sekitar 143 spesies burung tercatat di kawasan ini — 12 di antaranya dilindungi, 30 tergolong langka.",
+    body: "Sekitar 143 spesies burung tercatat di kawasan ini, 12 di antaranya dilindungi, 30 tergolong langka.",
     detail:
       "Kawasan PAMURBAYA adalah jalur migrasi burung Asia-Australasia. Setiap musim migrasi, puluhan spesies transit di sini untuk beristirahat dan mencari makan di lumpur muara yang kaya invertebrata. Spesies dilindungi yang sering terlihat antara lain Bangau Bluwok (Mycteria cinerea), Trinil Pantai, dan Cekakak Sungai. Birdwatching terbaik dilakukan pagi hari antara pukul 06.00–08.00 dari gazebo tepi laut.",
   },
@@ -108,7 +108,7 @@ export const whyMangroveMatters = [
     title: "Habitat Kera Ekor Panjang",
     body: "Populasi kera ekor panjang (long-tailed macaque) hidup bebas di bawah kanopi hutan bakau.",
     detail:
-      "Macaca fascicularis atau kera ekor panjang adalah salah satu penghuni tetap kawasan Wonorejo. Mereka beradaptasi baik dengan lingkungan mangrove — mahir berenang dan sering terlihat mencari kepiting serta moluska di tepi sungai. Penting: jangan memberi makan kera. Pemberian makan buatan mengubah perilaku alami mereka, memicu agresivitas, dan membuat mereka ketergantungan pada manusia.",
+      "Macaca fascicularis atau kera ekor panjang adalah salah satu penghuni tetap kawasan Wonorejo. Mereka beradaptasi baik dengan lingkungan mangrove, mahir berenang dan sering terlihat mencari kepiting serta moluska di tepi sungai. Penting: jangan memberi makan kera. Pemberian makan buatan mengubah perilaku alami mereka, memicu agresivitas, dan membuat mereka ketergantungan pada manusia.",
   },
   {
     title: "Ekonomi Baru Warga Pesisir",
@@ -123,7 +123,7 @@ export const communityProfiles = [
     name: "Pak Slamet (ilustratif)",
     role: "Mantan petani tambak, kini pengemudi perahu wisata",
     quote:
-      "Dulu saya hanya mengurus tambak. Sekarang saya mengantar tamu menyusuri sungai — tambaknya tetap ada, tapi mangrovenya juga kami jaga.",
+      "Dulu saya hanya mengurus tambak. Sekarang saya mengantar tamu menyusuri sungai tambaknya tetap ada, tapi mangrovenya juga kami jaga.",
   },
   {
     name: "Bu Yuli (ilustratif)",
@@ -178,7 +178,7 @@ export const testimonials = [
 ];
 
 export const doList = [
-  "Buang sampah pada tempatnya — bawa pulang jika perlu.",
+  "Buang sampah pada tempatnya, bawa pulang jika perlu.",
   "Tetap di jalur kayu / boardwalk yang sudah disediakan.",
   "Gunakan sepatu nyaman & pakaian tertutup ringan.",
   "Ikuti arahan pemandu dan rambu kawasan konservasi.",
@@ -187,7 +187,7 @@ export const doList = [
 export const dontList = [
   "Jangan memberi makan kera ekor panjang.",
   "Jangan mengambil tanaman, hewan, atau bagian mangrove.",
-  "Jangan bersuara terlalu keras — ganggu satwa liar.",
+  "Jangan bersuara terlalu keras karena dapat mengganggu satwa liar.",
   "Jangan menggunakan drone tanpa izin pengelola.",
 ];
 
@@ -198,7 +198,7 @@ export const carbonStats = [
     unit: "ton CO₂/tahun",
     label: "Karbon tersimpan",
     detail:
-      "Hutan mangrove menyimpan karbon 3–5× lebih banyak per hektar dibanding hutan tropis darat. Estimasi ±3.000 ton CO₂/tahun untuk kawasan Wonorejo mengacu pada rata-rata simpanan karbon mangrove Asia Tenggara (~15 ton C/ha/tahun). Karbon ini tersimpan di biomassa pohon dan sedimen lumpur yang terendam — disebut 'blue carbon', salah satu mekanisme mitigasi iklim paling efisien di planet ini.",
+      "Hutan mangrove menyimpan karbon 3–5× lebih banyak per hektar dibanding hutan tropis darat. Estimasi ±3.000 ton CO₂/tahun untuk kawasan Wonorejo mengacu pada rata-rata simpanan karbon mangrove Asia Tenggara (~15 ton C/ha/tahun). Karbon ini tersimpan di biomassa pohon dan sedimen lumpur yang terendam disebut 'blue carbon', salah satu mekanisme mitigasi iklim paling efisien di planet ini.",
   },
   {
     value: "200",
@@ -219,7 +219,7 @@ export const carbonStats = [
 /** Timeline konservasi kawasan */
 export const conservationTimeline = [
   { year: "2010", event: "Vegetasi mangrove mulai menipis akibat alih fungsi lahan pesisir." },
-  { year: "2015", event: "Program restorasi dimulai — kolaborasi Pemkot Surabaya, warga, dan LSM." },
+  { year: "2015", event: "Program restorasi dimulai yaitu kolaborasi Pemkot Surabaya, warga, dan LSM." },
   { year: "2018", event: "Jogging track kayu dan dermaga perahu diresmikan. Kunjungan wisata meningkat." },
   { year: "2021", event: "Mangrove Information Center (MIC) dibuka sebagai pusat edukasi resmi kawasan." },
   { year: "2024", event: "±200 hektar terjaga, 40+ keluarga nelayan terlibat aktif sebagai pengelola wisata." },

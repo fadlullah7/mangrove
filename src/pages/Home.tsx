@@ -15,19 +15,21 @@ import { useReveal } from "../hooks/useReveal";
 
 import c1 from "../assets/carousel 1.png";
 import c2 from "../assets/carousel 2.png";
-import c3 from "../assets/carousel 3.png";
-import c4 from "../assets/carousel 4.png";
+import c9 from "../assets/carousel 9.png";
+import c10 from "../assets/carousel 10.png";
 import c6 from "../assets/carousel 6.png";
 import c11 from "../assets/carousel 11.png";
+import c12 from "../assets/carousel 12.png";
 
-const carouselImages = [c1, c2, c3, c4, c6, c11];
+const carouselImages = [c1, c2, c9, c10, c6, c11, c12];
 const carouselCaptions = [
   "Wonorejo · Rungkut · Surabaya",
   "Boardwalk Kayu · Susur Hutan Bakau",
   "Mangrove Wonorejo · Ekowisata",
   "Gazebo Tepi Laut · Sunrise & Birdwatching",
   "Hutan Bakau · Kawasan Konservasi",
-  "Wisata Perahu · Susur Muara",
+  "Mangrove Wonorejo · Ekowisata",
+  "Kunjungan Edukasi · Mangrove Wonorejo",
 ];
 
 const whyIcons = [Waves, Bird, TreePine, Users];
@@ -114,10 +116,6 @@ export default function Home() {
               <a href="#kenapa" className="stamp-btn text-teal">
                 Kenapa Mangrove?
               </a>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Postage color="text-teal">±200 Hektar Hutan Bakau</Postage>
-              <Postage color="text-rust">143 Spesies Burung</Postage>
             </div>
           </div>
           <div className="relative">
@@ -278,7 +276,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 border-4 border-ink bg-cream p-3 shadow-[4px_4px_0_#3B2A20] rotate-[-0.5deg] flex flex-col">
-              <img src={c3} alt="Wisata Perahu Mangrove" className="w-full flex-1 object-cover min-h-0" />
+              <img src={c9} alt="Wisata Perahu Mangrove" className="w-full flex-1 object-cover min-h-0" />
               <div className="mt-2 font-stamp text-xs font-medium text-ink/70 text-center shrink-0">
                 Wisata Perahu · Susur Muara
               </div>
@@ -383,7 +381,7 @@ export default function Home() {
               Tahukah Kamu?
             </div>
             <p className="mt-2 text-lg">
-              Sekitar <b>143 spesies burung</b> tercatat di kawasan ini — 12 di
+              Sekitar <b>143 spesies burung</b> tercatat di kawasan ini, 12 di
               antaranya berstatus dilindungi.
             </p>
           </div>
@@ -404,7 +402,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto reveal">
             <div className="font-stamp text-xs font-medium text-rust">
-              Wahana
+              Eksplorasi
             </div>
             <h2 className="mt-2 text-4xl md:text-5xl">Pilih Cara Menjelajahinya</h2>
           </div>
@@ -429,7 +427,7 @@ export default function Home() {
                     to={`/wahana/${w.id}`}
                     className="stamp-btn text-rust mt-4 w-fit"
                   >
-                    Pilih Wahana
+                    Pilih
                   </Link>
                 </div>
               );
