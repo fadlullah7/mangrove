@@ -59,7 +59,6 @@ export default function Reservasi() {
             <p className="text-sm text-ink/75 mt-1">{wahana.tagline}</p>
             <div className="mt-4 border-t-2 border-dashed border-ink pt-4 text-sm space-y-2">
               <div><b>Harga:</b> {wahana.price}</div>
-              <div><b>Durasi:</b> {wahana.duration}</div>
               <div><b>Lokasi:</b> Mangrove Wonorejo, Rungkut, Surabaya</div>
             </div>
           </aside>

@@ -52,13 +52,15 @@ export default function WahanaDetail() {
         >
           <ArrowLeft className="w-4 h-4" /> Kembali
         </button>
-        <div className="mt-6 grid gap-10 md:grid-cols-2 items-start">
-          <div className="rotate-[-1deg] border-4 border-ink bg-cream p-3 shadow-[6px_6px_0_#3B2A20]">
+        <div className="mt-6 grid gap-10 md:grid-cols-2 items-center">
+          <div className="flex justify-center">
+          <div className="rotate-[-1deg] border-4 border-ink bg-cream p-3 shadow-[6px_6px_0_#3B2A20] mx-auto max-w-sm md:max-w-none">
             <img
               src={wahanaImages[wahana.id] ?? c11}
               alt={wahana.name}
               className="w-full h-auto object-cover"
             />
+          </div>
           </div>
           <div>
             <div className="font-stamp text-xs font-medium text-rust">
@@ -69,9 +71,6 @@ export default function WahanaDetail() {
             <div className="mt-6 flex flex-wrap gap-3 font-stamp text-xs font-medium">
               <span className="border-2 border-teal text-teal px-3 py-1 rounded-full">
                 {wahana.price}
-              </span>
-              <span className="border-2 border-rust text-rust px-3 py-1 rounded-full">
-                {wahana.duration}
               </span>
             </div>
             <div className="mt-6 ticket">
