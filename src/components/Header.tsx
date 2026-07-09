@@ -1,20 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
-import { Compass, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const links = [
     { href: "/#kenapa", label: "Kenapa Penting" },
     { href: "/#fasilitas", label: "Fasilitas" },
-    { href: "/#wahana", label: "Wahana" },
+    { href: "/#wahana", label: "Eksplorasi" },
     { href: "/#panduan", label: "Panduan" },
   ];
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b-2 border-ink">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2">
-          <Compass className="w-6 h-6 text-teal" />
+          <img src={logo} alt="Logo Mangrove Wonorejo" className="w-12 h-12 object-contain" />
           <span className="font-display text-2xl leading-none text-ink">
             Mangrove Wonorejo
           </span>

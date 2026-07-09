@@ -1,4 +1,4 @@
-import { Leaf } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2 font-display text-2xl">
-            <Leaf className="w-5 h-5 text-mustard" /> Mangrove Wonorejo
+            <img src={logo} alt="Logo Mangrove Wonorejo" className="w-10 h-10 object-contain brightness-0 invert" /> Mangrove Wonorejo
           </div>
           <p className="mt-3 text-sm opacity-80">
             Ekowisata mangrove ±200 hektar di sabuk hijau Pantai Timur Surabaya (PAMURBAYA).

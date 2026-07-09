@@ -20,6 +20,7 @@ import c10 from "../assets/carousel 10.png";
 import c6 from "../assets/carousel 6.png";
 import c11 from "../assets/carousel 11.png";
 import c12 from "../assets/carousel 12.png";
+import qris from "../assets/image 1.png";
 
 const carouselImages = [c1, c2, c9, c10, c6, c11, c12];
 const carouselCaptions = [
@@ -421,7 +422,7 @@ export default function Home() {
                   <h3 className="text-2xl">{w.name}</h3>
                   <p className="mt-2 text-sm text-ink/75 flex-1">{w.tagline}</p>
                   <div className="mt-4 font-stamp text-xs font-medium text-teal">
-                    {w.price} · {w.duration}
+                    {w.price}
                   </div>
                   <Link
                     to={`/wahana/${w.id}`}
@@ -622,22 +623,21 @@ export default function Home() {
           >
             <div className="flex items-center justify-between">
               <h3 className="text-2xl flex items-center gap-2">
-                <Sprout className="w-5 h-5 text-teal" /> Dukung Pelestarian
+                <Sprout className="w-5 h-5 text-teal" aria-hidden="true" /> Donasi via QRIS
               </h3>
-              <button onClick={() => setSupportOpen(false)} aria-label="Tutup">
+              <button type="button" onClick={() => setSupportOpen(false)} aria-label="Tutup">
                 <X className="w-5 h-5" />
               </button>
             </div>
             <p className="mt-3 text-sm text-ink/80">
-              Kegiatan penanaman mangrove di Wonorejo umumnya digagas melalui
-              kolaborasi pemerintah kota, komunitas warga, dan sektor swasta.
-              Kamu bisa ikut serta dengan mengontak langsung pengelola kawasan
-              untuk jadwal penanaman kolektif, atau bergabung dengan komunitas
-              konservasi lokal.
+              Scan QRIS di bawah untuk berdonasi mendukung pelestarian mangrove Wonorejo.
+              Setiap donasi membantu penanaman bibit dan pemberdayaan warga pesisir.
             </p>
-            <p className="mt-3 text-xs text-ink/60">
-              Informasi ini bersifat edukatif — tidak ada transaksi pembayaran
-              yang diproses di halaman ini.
+            <div className="mt-4 border-2 border-ink p-3 bg-white">
+              <img src={qris} alt="QRIS donasi Mangrove Wonorejo" className="w-full h-auto" />
+            </div>
+            <p className="mt-3 text-xs text-ink/60 text-center">
+              Scan dengan aplikasi mobile banking atau dompet digital apapun.
             </p>
           </div>
         </div>

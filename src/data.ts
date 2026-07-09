@@ -3,7 +3,6 @@ export type Wahana = {
   name: string;
   tagline: string;
   price: string; // "Gratis" or "Rp ..."
-  duration: string;
   description: string;
   includes: string[];
 };
@@ -14,7 +13,6 @@ export const wahanas: Wahana[] = [
     name: "Jalan Kaki Susur Jogging Track",
     tagline: "Menyusuri boardwalk kayu di antara akar bakau.",
     price: "Gratis",
-    duration: "±45–60 menit",
     description:
       "Berjalan santai di sepanjang jogging track kayu ±1–2 km yang membelah rimbun hutan bakau. Rute ideal untuk keluarga, pengamat burung, dan pengunjung yang ingin menikmati suasana Pantai Timur Surabaya tanpa terburu-buru.",
     includes: [
@@ -28,7 +26,6 @@ export const wahanas: Wahana[] = [
     name: "Wisata Perahu Susur Muara",
     tagline: "Menyusuri sungai dan muara sejauh ±5 km.",
     price: "Berbayar (tarif menyesuaikan pengelola)",
-    duration: "±15 menit per trip",
     description:
       "Naiki perahu tradisional menyusuri sungai Wonorejo sampai ke muara. Rute sekitar 5 kilometer ini adalah cara terbaik melihat kanopi bakau, burung air, dan sesekali kera ekor panjang dari dekat.",
     includes: [
@@ -42,7 +39,6 @@ export const wahanas: Wahana[] = [
     name: "Kunjungan Edukasi Kelompok / Sekolah",
     tagline: "Program terpandu untuk rombongan pelajar & komunitas.",
     price: "Reservasi (paket menyesuaikan pengelola)",
-    duration: "±2–3 jam",
     description:
       "Program edukasi terpandu bagi sekolah dan komunitas: mengenal fungsi green belt PAMURBAYA, jenis-jenis mangrove seperti Avicennia alba, Nypa fruticans, dan Excoecaria agallocha, hingga simulasi penanaman bibit bersama warga.",
     includes: [
@@ -120,13 +116,13 @@ export const whyMangroveMatters = [
 
 export const communityProfiles = [
   {
-    name: "Pak Slamet (ilustratif)",
+    name: "Pak Slamet",
     role: "Mantan petani tambak, kini pengemudi perahu wisata",
     quote:
       "Dulu saya hanya mengurus tambak. Sekarang saya mengantar tamu menyusuri sungai tambaknya tetap ada, tapi mangrovenya juga kami jaga.",
   },
   {
-    name: "Bu Yuli (ilustratif)",
+    name: "Bu Yuli",
     role: "Anggota kelompok pengelola kuliner mangrove",
     quote:
       "Kami mencoba olahan dari buah mangrove dan hasil laut sekitar. Wisatawan datang, warga dapat pemasukan tambahan tanpa merusak hutannya.",
@@ -161,17 +157,17 @@ export const wahanaTips: Record<string, string[]> = {
 
 export const testimonials = [
   {
-    name: "Rania (contoh)",
+    name: "Rania",
     from: "Sidoarjo",
     text: "Jalan kaki di jogging track-nya menenangkan sekali. Anak-anak juga senang lihat burung dan kepiting kecil di lumpur.",
   },
   {
-    name: "Bagas (contoh)",
+    name: "Bagas",
     from: "Surabaya",
     text: "Naik perahu ke muara jadi pengalaman baru. Pemandu ceritanya asyik dan sangat sabar menjawab pertanyaan.",
   },
   {
-    name: "Nadia (contoh)",
+    name: "Nadia",
     from: "Malang",
     text: "Tidak menyangka Surabaya punya paru-paru hijau seluas ini. Wajib mampir kalau ke kota.",
   },
