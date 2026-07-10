@@ -529,7 +529,7 @@ export default function Home() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
             <button onClick={() => setWahanaOpen(true)} className="stamp-btn text-rust">
-              Reservasi Wisata Perahu
+              Reservasi Sekarang
             </button>
             <button
               onClick={() => {
