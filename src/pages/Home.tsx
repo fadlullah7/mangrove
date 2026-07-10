@@ -527,9 +527,14 @@ export default function Home() {
             konservasi Surabaya.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
-            <Link to="/wahana/perahu" className="stamp-btn text-rust">
-              Reservasi Wisata Perahu
-            </Link>
+            <button
+              onClick={() => {
+                document.getElementById("wahana")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="stamp-btn text-rust"
+            >
+              Reservasi Sekarang
+            </button>
             <button
               onClick={() => {
                 if (navigator.share) {
