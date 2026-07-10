@@ -62,6 +62,7 @@ export default function Home() {
   const [supportOpen, setSupportOpen] = useState(false);
   const [whyOpen, setWhyOpen] = useState<typeof whyMangroveMatters[number] | null>(null);
   const [carbonOpen, setCarbonOpen] = useState<typeof carbonStats[number] | null>(null);
+  const [wahanaOpen, setWahanaOpen] = useState(false);
   const [slide, setSlide] = useState(0);
 
   const prev = useCallback(() => setSlide((s) => (s - 1 + carouselImages.length) % carouselImages.length), []);
@@ -111,9 +112,9 @@ export default function Home() {
               serta kera ekor panjang yang hidup di bawah kanopi bakau.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/wahana/perahu" className="stamp-btn text-rust">
+              <button onClick={() => setWahanaOpen(true)} className="stamp-btn text-rust">
                 Rencanakan Kunjungan
-              </Link>
+              </button>
               <a href="#kenapa" className="stamp-btn text-teal">
                 Kenapa Mangrove?
               </a>
@@ -527,9 +528,9 @@ export default function Home() {
             konservasi Surabaya.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
-            <Link to="/wahana/perahu" className="stamp-btn text-rust">
+            <button onClick={() => setWahanaOpen(true)} className="stamp-btn text-rust">
               Reservasi Wisata Perahu
-            </Link>
+            </button>
             <button
               onClick={() => {
                 if (navigator.share) {
@@ -611,6 +612,52 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {wahanaOpen && (
+        <div
+          className="fixed inset-0 bg-ink/70 z-50 flex items-center justify-center p-4"
+          onClick={() => setWahanaOpen(false)}
+        >
+          <div
+            className="ticket max-w-3xl w-full border-4 border-ink"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between gap-4 mb-6">
+              <div>
+                <div className="font-stamp text-xs font-medium text-rust">Eksplorasi</div>
+                <h3 className="text-2xl">Pilih Cara Menjelajahinya</h3>
+              </div>
+              <button onClick={() => setWahanaOpen(false)} aria-label="Tutup">
+                <X className="w-5 h-5 shrink-0" />
+              </button>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {wahanas.map((w, i) => {
+                const Icon = wahanaIcons[i];
+                return (
+                  <Link
+                    key={w.id}
+                    to={`/wahana/${w.id}`}
+                    onClick={() => setWahanaOpen(false)}
+                    className="ticket text-ink hover:-translate-y-1 transition-transform block group"
+                  >
+                    <div className="w-10 h-10 rounded-full border-2 border-rust text-rust flex items-center justify-center mb-3">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h4 className="text-lg leading-tight">{w.name}</h4>
+                    <p className="mt-2 text-sm text-ink/75">{w.tagline}</p>
+                    <div className="mt-3 font-stamp text-xs font-medium text-teal">{w.price}</div>
+                    <div className="mt-3 font-stamp text-xs font-medium text-rust opacity-0 group-hover:opacity-100 transition-opacity">
+                      Pilih →
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
 
       {supportOpen && (
         <div

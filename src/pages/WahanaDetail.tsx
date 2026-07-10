@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { wahanas } from "../data";
 import { useReservation } from "../context/ReservationContext";
-import { ArrowLeft, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 import c11 from "../assets/carousel 11.png";
 import c5 from "../assets/carousel 5.png";
@@ -16,7 +16,8 @@ const wahanaImages: Record<string, string> = {
 
 export default function WahanaDetail() {
   const { wahanaId } = useParams();
-  const wahana = wahanas.find((w) => w.id === wahanaId);
+  const idx = wahanas.findIndex((w) => w.id === wahanaId);
+  const wahana = wahanas[idx];
   const { setWahana } = useReservation();
   const navigate = useNavigate();
 
@@ -35,6 +36,9 @@ export default function WahanaDetail() {
     setWahana(wahana.id);
     navigate(`/reservasi/${wahana.id}`);
   };
+
+  const prev = wahanas[(idx - 1 + wahanas.length) % wahanas.length];
+  const next = wahanas[(idx + 1) % wahanas.length];
 
   const onBack = () => {
     navigate("/");
@@ -88,6 +92,20 @@ export default function WahanaDetail() {
               Reservasi Sekarang
             </button>
           </div>
+        </div>
+        <div className="mt-10 flex flex-wrap gap-3 justify-between">
+          <button
+            onClick={() => navigate(`/wahana/${prev.id}`)}
+            className="stamp-btn text-teal"
+          >
+            <ArrowLeft className="w-4 h-4 inline mr-1" /> {prev.name}
+          </button>
+          <button
+            onClick={() => navigate(`/wahana/${next.id}`)}
+            className="stamp-btn text-rust"
+          >
+            {next.name} <ArrowRight className="w-4 h-4 inline ml-1" />
+          </button>
         </div>
       </div>
     </div>
